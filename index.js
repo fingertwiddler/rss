@@ -1,3 +1,4 @@
+import RSS from "https://jspm.dev/rss"
 export default async function (items, config) {
   // Do RSS only when there's custom BASE URL
   // Instantiate RSS
