@@ -1,5 +1,5 @@
 import RSS from "https://jspm.dev/rss"
-export default async function (items, config) {
+export default async function (items, config, offbase) {
   // Do RSS only when there's custom BASE URL
   // Instantiate RSS
   let feed = new RSS()
@@ -14,5 +14,5 @@ export default async function (items, config) {
   })
   debugger;
   let xml = feed.xml({ indent: true });
-  await fs.promises.writeFile(`${config.DEST}/rss.xml`, xml)
+  await offbase.fs.promises.writeFile(`${config.DEST}/rss.xml`, xml)
 }
