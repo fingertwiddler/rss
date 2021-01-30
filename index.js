@@ -6,10 +6,10 @@ export default async function (items, config) {
   let feedItems = items.slice(0, config.FEED.CHUNK)
   feedItems.forEach((item) => {
     feed.item({
-      title: item.metadata.title,
+      title: item.data.title,
       description: item.html,
       url: `${config.FEED.BASE}${item.key}`,
-      date: item.metadata.updated
+      date: item.data.updated
     })
   })
   debugger;
