@@ -8,7 +8,7 @@ export default async function (items, config, offbase) {
   feedItems.forEach((item) => {
     let html;
     if (config.settings.FEED.BASE.length === 0) {
-      html = marked(item.content, { baseUrl: "../" }) 
+      html = marked(item.content, { baseUrl: "../../" }) 
     } else {
       html = marked(item.content, { baseUrl: config.settings.FEED.BASE }) 
     }
