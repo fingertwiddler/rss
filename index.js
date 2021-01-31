@@ -15,7 +15,7 @@ export default async function (items, config, offbase) {
     feed.item({
       title: item.data.title,
       description: html,
-      url: `${config.settings.FEED.BASE}${item.key}`,
+      url: `${config.settings.FEED.BASE}post/${item.key}`,
       date: item.data.updated
     })
   })
